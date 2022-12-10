@@ -1,2 +1,29 @@
+@import '../../../styles/_fonts'
+
 .wrapper
-	@apply py-8 relative sm:px-16 px-6
+	@apply py-8 relative sm:px-16 px-6 flex items-center justify-between
+	.content
+		@apply mx-auto flex justify-between gap-8 2xl:max-w-[1280px] w-full
+		>img
+			width: 24px
+			height: 24px
+		>h2
+			font-size: 24px
+			font-family: Eudoxus-Bold
+		.menu
+			@apply relative w-[24px] h-[24px] bg-transparent flex flex-col items-end justify-around cursor-pointer
+			>span
+				@apply rounded-sm bg-white h-[2px]
+				&:nth-child(1)
+					width: 70%
+				&:nth-child(2)
+					width: 100%
+				&:nth-child(3)
+					width: 50%
+
+.activeMenu
+	@apply absolute right-0 top-0 w-14 h-40 bg-slate-800 rounded-2xl mx-16 my-16
+	animation: fadeIn 4s ease
+	
+			
+				

@@ -1,0 +1,19 @@
+.wrapper
+	@apply mx-auto flex flex-col
+	.title
+		@apply flex justify-center items-center flex-col relative z-10
+		h1
+			@apply text-[144px] tracking-[-0.02em] uppercase
+			font-family: "Eudoxus-Bold"
+			>span
+				@apply w-[212px] h-[108px] border-[16px] rounded-r-[50px] border-white inline-block ml-4
+.slide
+	@apply relative w-[90%] ml-auto md:-mt-[20px] -mt-[12px] 
+	.image
+		@apply w-full relative h-[300px] -top-[30px] rounded-tl-[140px] z-0 -top-[30px]
+		img
+			@apply w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative top-3
+	.stamp
+		@apply relative w-[155px] h-[155px] right-0 ml-auto bottom-[100px] right-10 
+		
+				

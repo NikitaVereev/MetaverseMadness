@@ -1,0 +1,40 @@
+import { FC } from 'react'
+import styles from './Hero.module.sass'
+import { motion } from 'framer-motion'
+import { staggerContainer, slideIn, textVariant } from '../../utils/motion'
+import Image from 'next/image'
+import cn from 'classnames'
+
+const Hero: FC = () => {
+	return (
+		<section>
+			<motion.div
+				variants={staggerContainer}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: false, amount: 0.25 }}
+				className={styles.wrapper}
+			>
+				<div className={styles.title}>
+					<motion.h1 variants={textVariant(1.1)}>Metaverse</motion.h1>
+					<motion.h1 variants={textVariant(1.2)}>
+						Ma<span></span>ness
+					</motion.h1>
+				</div>
+				<motion.div
+					className={styles.slide}
+					variants={slideIn('right', 'tween', 0.2, 1)}
+				>
+					<div className={cn(styles.image, 'hero-gradient')}>
+						<img src='/space.png' alt='space' />
+					</div>
+					<div className={styles.stamp}>
+						<Image src='/stamp.png' alt='stamp' layout='fill' />
+					</div>
+				</motion.div>
+			</motion.div>
+		</section>
+	)
+}
+
+export default Hero
