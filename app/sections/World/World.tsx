@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { textContainer, textVariant2 } from '../../utils/motion'
 import Image from 'next/image'
 import styles from './World.module.sass'
+import cn from 'classnames'
 
 const World: FC = () => {
 	return (
@@ -22,11 +23,17 @@ const World: FC = () => {
 
 				<motion.div className={styles.map}>
 					<Image src='/map.png' alt='the world' layout='fill' />
-					<Image src='/people-01.png' alt='people1' width={61} height={61} />
-					<Image src='/people-02.png' alt='people2' width={61} height={61} />
-					<Image src='/people-03.png' alt='people3' width={61} height={61} />
-					<motion.div className={styles.mapSector}>
-						<Image src='/planet2.png' alt='planet2' layout='fill' />
+					<div className={styles.person}>
+						<Image src='/people-01.png' alt='people1' width={61} height={61} />
+					</div>
+					<div className={styles.person}>
+						<Image src='/people-02.png' alt='people2' width={61} height={61} />
+					</div>
+					<div className={styles.person}>
+						<Image src='/people-03.png' alt='people3' width={61} height={61} />
+					</div>
+					<motion.div className={cn(styles.mapSector, styles.mapSectorFirst)}>
+						<Image src='/low1.png' alt='planet2' layout='fill' />
 						<div>
 							<div>
 								<Image
@@ -53,7 +60,7 @@ const World: FC = () => {
 						</div>
 					</motion.div>
 					<motion.div className={styles.mapSector}>
-						<Image src='/planet2.png' alt='planet3' layout='fill' />
+						<Image src='/low2.png' alt='planet3' layout='fill' />
 						<div>
 							<div>
 								<Image

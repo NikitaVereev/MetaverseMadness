@@ -1,7 +1,56 @@
+.title
+	@apply px-64
+	
 .map
-	@apply relative
+	@apply relative px-28 mt-16 max-h-[526px] h-[526px]
+	>img
+		@apply object-contain relative
+	.person
+		@apply w-[68px] h-[68px] flex items-center justify-center rounded-full
+		background: rgba(255, 255, 255, 0.08)
+		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5)
+		backdrop-filter: blur(6px)
+		&:nth-child(2)
+			@apply absolute bottom-[115px] right-[240px]
+		&:nth-child(3)
+			@apply absolute top-[31px] left-[250px]
+		&:nth-child(4)
+			@apply absolute top-[175px] left-[600px]
+		&:nth-child(5)
+			@apply top-64 left-64
+			
+
+		
 	
 .mapSector
-	@apply relative max-h-[150px] max-w-[196px]
+	@apply relative h-[150px] w-[196px] flex items-center justify-center ml-auto right-[260px] top-[-120px] rounded-3xl
+	&::before
+		content: ''
+		background: rgba(255, 255, 255, 0.08)
+		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5)
+		border-radius: 24px
+		backdrop-filter: blur(6px)
+		width: 212px
+		position: absolute
+		height: 166px
 	>img
-		@apply object-cover z-0
+		@apply object-cover z-0 rounded-3xl
+	>div
+		@apply relative z-10 pb-4 absolute -bottom-12
+		>div
+			@apply flex items-center relative justify-center
+			>img
+				&:nth-child(2)
+					@apply -left-3 relative
+				&:nth-child(3)
+					@apply -left-6 relative
+					
+			>span
+				@apply text-xs leading-4
+		>h5
+			@apply text-lg leading-6
+			font-family: 'Eudoxus-Bold'
+.mapSectorFirst
+	top: 250px
+	margin-left: 0 
+	left: 250px 

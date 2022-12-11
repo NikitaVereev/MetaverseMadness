@@ -1,0 +1,24 @@
+.wrapper
+	@apply flex gap-8 px-32 relative
+	.info
+		@apply p-7 max-w-sm flex flex-col justify-end
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%)
+		border-radius: 32px
+		border: 1px solid #6a6a6a
+		>h5
+			@apply text-3xl leading-10 tracking-[-0.02em] mb-2
+			font-family: 'Eudoxus-Bold'
+		>span
+			@apply mb-6 text-lg tracking-[-0.02em] leading-6
+		>p
+			@apply tracking-[-0.02em] text-2xl leading-[46px]
+	>img
+		@apply absolute left-[28rem] z-20
+
+	
+	
+.image
+	@apply relative w-[768px]  h-[610px] rounded-[40px] bg-[#c4c4c4] overflow-hidden
+	>img
+		@apply object-cover bottom-0 right-0 absolute
+		
