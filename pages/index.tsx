@@ -1,9 +1,8 @@
-import Page from '../app/page'
+import { NextPage } from 'next'
+import Home from '../app/components/screens/Home'
 
-export default function Home() {
-	return (
-		<div className='text-white text-5xl'>
-			<Page />
-		</div>
-	)
+const HomePage: NextPage = () => {
+	return <Home />
 }
+
+export default HomePage

@@ -1,15 +1,18 @@
 @import '../../../styles/_fonts'
 
 .wrapper
-	@apply py-8 relative sm:px-16 px-6 flex items-center justify-between
+	@apply py-8 relative sm:px-16 px-6 flex items-center z-20 justify-between
 	.content
 		@apply mx-auto flex justify-between gap-8 2xl:max-w-[1280px] w-full
 		>img
 			width: 24px
 			height: 24px
-		>h2
-			font-size: 24px
-			font-family: Eudoxus-Bold
+		>a
+			>h2
+				font-size: 24px
+				z-index: 1
+				position: relative
+				font-family: Eudoxus-Bold
 		.menu
 			@apply relative w-[24px] h-[24px] bg-transparent flex flex-col items-end justify-around cursor-pointer
 			>span
@@ -22,8 +25,12 @@
 					width: 50%
 
 .activeMenu
-	@apply absolute right-0 top-0 w-14 h-40 bg-slate-800 rounded-2xl mx-16 my-16
+	@apply absolute right-0 top-0 px-6 py-8  bg-slate-800 rounded-2xl mx-16 my-16
 	animation: fadeIn 4s ease
+	.title
+		@apply text-base text-right
+		.ul
+			@apply flex flex-col gap-2
 	
 			
 				
