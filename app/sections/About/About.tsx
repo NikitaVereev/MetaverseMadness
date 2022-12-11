@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { motion } from 'framer-motion'
 import styles from './About.module.sass'
+
 import {
 	staggerContainer,
 	fadeIn,
@@ -8,6 +9,7 @@ import {
 	textVariant2,
 } from '../../utils/motion'
 import cn from 'classnames'
+import Link from 'next/link'
 
 const About: FC = () => {
 	return (
@@ -37,11 +39,13 @@ const About: FC = () => {
 					metaverse by scrolling down
 				</motion.h3>
 
-				<motion.img
-					className={styles.arrow}
-					variants={fadeIn('up', 'tween', 0.3, 1)}
-					src='/images/icons/arrowDown.svg'
-				/>
+				<Link href='#explore'>
+					<motion.img
+						className={styles.arrow}
+						variants={fadeIn('up', 'tween', 0.3, 1)}
+						src='/images/icons/arrowDown.svg'
+					/>
+				</Link>
 			</motion.div>
 		</section>
 	)

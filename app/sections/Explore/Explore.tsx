@@ -11,7 +11,7 @@ import { staggerContainer } from '../../utils/motion'
 
 const Explore: FC = () => {
 	return (
-		<section>
+		<section id='explore'>
 			<ExploreContainer menu={slides} />
 		</section>
 	)
