@@ -1,0 +1,41 @@
+.wrapper
+	@apply flex px-20 justify-around items-center
+	.info
+		@apply max-w-md
+		.title
+			@apply text-left mb-6
+		>h4
+			@apply text-left
+	.image
+		@apply max-w-[50%] w-full relative h-[600px]
+		>img
+			@apply object-cover
+	.counter, .counterHorizontal
+		@apply flex flex-col gap-7 max-w-sm items-center
+		>div
+			@apply flex gap-7 
+			>span
+				@apply text-white leading-6 text-xl p-6 rounded-3xl
+				background: rgba(255, 255, 255, 0.08)
+				backdrop-filter: blur(24px)
+				font-family: "Eudoxus-Bold"
+			>p
+				@apply text-lg leading-8 text-[#b0b0b0]
+.infoNew
+	.title
+		@apply text-left mb-11
+	>h4
+		@apply text-left
+.counterHorizontal
+	max-width: 100% !important
+	gap: 46px !important
+	flex-direction: row !important
+	align-items: start !important
+	>div
+		@apply flex-col
+		max-width: 253px !important
+		>span
+			@apply w-fit
+		>h5
+			@apply text-2xl leading-7
+			font-family: 'Eudoxus-Bold'

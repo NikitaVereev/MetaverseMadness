@@ -1,7 +1,12 @@
 import { FC } from 'react'
 import { motion } from 'framer-motion'
 import styles from './About.module.sass'
-import { staggerContainer, fadeIn, textContainer } from '../../utils/motion'
+import {
+	staggerContainer,
+	fadeIn,
+	textContainer,
+	textVariant2,
+} from '../../utils/motion'
 import cn from 'classnames'
 
 const About: FC = () => {
@@ -15,7 +20,13 @@ const About: FC = () => {
 				viewport={{ once: false, amount: 0.25 }}
 			>
 				<div className='gradient-02 z-0' />
-				<motion.h4 variants={textContainer}>About Metaverue</motion.h4>
+				<motion.h4 variants={textContainer}>
+					{Array.from('| About Metaverse').map((letter, index) => (
+						<motion.span variants={textVariant2} key={index}>
+							{letter === ' ' ? '\u00A0' : letter}
+						</motion.span>
+					))}
+				</motion.h4>
 				<motion.h3 variants={fadeIn('up', 'tween', 0.2, 1)}>
 					<span>Metaverse</span> is a new thing in the future, where you can
 					enjoy the virtual world by feeling like it`s really real, you can feel
