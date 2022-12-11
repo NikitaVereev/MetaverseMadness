@@ -1,7 +1,13 @@
 import { FC } from 'react'
 import { motion } from 'framer-motion'
 import styles from '../GetStarted/GetStarted.module.sass'
-import { fadeIn, textContainer, textVariant2 } from '../../utils/motion'
+import {
+	fadeIn,
+	planetVariants,
+	staggerContainer,
+	textContainer,
+	textVariant2,
+} from '../../utils/motion'
 import Image from 'next/image'
 
 const WhatsNew: FC = () => {
@@ -9,7 +15,10 @@ const WhatsNew: FC = () => {
 		<section>
 			<motion.div
 				className={styles.wrapper}
-				variants={fadeIn('right', 'spring', 0.3, 0.75)}
+				variants={staggerContainer}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: false, amount: 0.25 }}
 			>
 				<motion.div className={styles.infoNew}>
 					<motion.h4 variants={textContainer}>
@@ -22,7 +31,10 @@ const WhatsNew: FC = () => {
 					<motion.h2 variants={textVariant2} className={styles.title}>
 						What`s new about Metaversus?
 					</motion.h2>
-					<div className={styles.counterHorizontal}>
+					<motion.div
+						variants={fadeIn('right', 'tween', 0.2, 1)}
+						className={styles.counterHorizontal}
+					>
 						<div>
 							<span>
 								<Image
@@ -53,9 +65,9 @@ const WhatsNew: FC = () => {
 								more realistic than ever
 							</p>
 						</div>
-					</div>
+					</motion.div>
 				</motion.div>
-				<motion.div className={styles.image}>
+				<motion.div className={styles.image} variants={planetVariants('right')}>
 					<Image src='/whats-new.png' alt='whats-new' layout='fill' />
 				</motion.div>
 			</motion.div>

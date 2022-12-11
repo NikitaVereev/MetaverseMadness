@@ -1,7 +1,12 @@
 import { FC } from 'react'
 import styles from './Hero.module.sass'
 import { motion } from 'framer-motion'
-import { staggerContainer, slideIn, textVariant } from '../../utils/motion'
+import {
+	staggerContainer,
+	slideIn,
+	textVariant,
+	zoomIn,
+} from '../../utils/motion'
 import Image from 'next/image'
 import cn from 'classnames'
 
@@ -28,9 +33,9 @@ const Hero: FC = () => {
 					<div className={cn(styles.image, 'hero-gradient')}>
 						<img src='/space.png' alt='space' />
 					</div>
-					<div className={styles.stamp}>
+					<motion.div className={styles.stamp} variants={zoomIn(2, 1)}>
 						<Image src='/stamp.png' alt='stamp' layout='fill' />
-					</div>
+					</motion.div>
 				</motion.div>
 			</motion.div>
 		</section>

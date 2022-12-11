@@ -1,0 +1,23 @@
+.footer
+	@apply px-32 pb-14 relative
+	.wrapper
+		@apply flex items-center justify-between
+		.button
+			@apply flex px-8 py-5 rounded-[32px] bg-[#25618b] 	items-center gap-3 cursor-pointer
+			transition: .5s ease
+			&:hover
+				background: darken(#25618b, 10%)
+			>span
+				@apply tracking-[0.005em] leading-5 text-base
+	.line
+		@apply w-full h-0.5 bg-white opacity-10 mt-20 mb-12
+	.footerBoard
+		@apply flex items-center justify-between
+		>h2
+			@apply text-3xl
+			font-family: 'Eudoxus-Bold'
+		>span
+			@apply tracking-[0.005em] text-sm opacity-80 text-center
+			color: rgba(255, 255, 255, 0.7)
+.ul
+	@apply flex items-center gap-7

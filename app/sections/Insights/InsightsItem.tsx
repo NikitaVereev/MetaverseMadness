@@ -3,10 +3,14 @@ import { IInsightsItem } from './insights.interface'
 import { motion } from 'framer-motion'
 import styles from './Insights.module.sass'
 import Image from 'next/image'
+import { fadeIn } from '../../utils/motion'
 
-const InsightsItem: FC<{ item: IInsightsItem }> = ({ item }) => {
+const InsightsItem: FC<{ item: IInsightsItem }> = ({ item, index }) => {
 	return (
-		<motion.div className={styles.card}>
+		<motion.div
+			className={styles.card}
+			variants={fadeIn('up', 'spring', index * 0.5, 1)}
+		>
 			<div className={styles.image}>
 				<Image src={item.image} alt={item.title} layout='fill' />
 			</div>

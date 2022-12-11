@@ -1,6 +1,11 @@
 import { FC } from 'react'
 import { motion } from 'framer-motion'
-import { textContainer, textVariant2 } from '../../utils/motion'
+import {
+	fadeIn,
+	staggerContainer,
+	textContainer,
+	textVariant2,
+} from '../../utils/motion'
 import Image from 'next/image'
 import styles from './World.module.sass'
 import cn from 'classnames'
@@ -8,7 +13,12 @@ import cn from 'classnames'
 const World: FC = () => {
 	return (
 		<section>
-			<motion.div>
+			<motion.div
+				variants={staggerContainer}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: false, amount: 0.25 }}
+			>
 				<motion.h4 variants={textContainer}>
 					{Array.from('| People on the World?').map((letter, index) => (
 						<motion.span variants={textVariant2} key={index}>
@@ -21,7 +31,10 @@ const World: FC = () => {
 					world
 				</motion.h2>
 
-				<motion.div className={styles.map}>
+				<motion.div
+					className={styles.map}
+					variants={fadeIn('up', 'tween', 0.3, 1)}
+				>
 					<Image src='/map.png' alt='the world' layout='fill' />
 					<div className={styles.person}>
 						<Image src='/people-01.png' alt='people1' width={61} height={61} />
