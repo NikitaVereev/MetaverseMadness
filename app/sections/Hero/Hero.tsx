@@ -7,7 +7,7 @@ import cn from 'classnames'
 
 const Hero: FC = () => {
 	return (
-		<section>
+		<section className='pt-0 pb-[200px]'>
 			<motion.div
 				variants={staggerContainer}
 				initial='hidden'

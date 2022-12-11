@@ -1,0 +1,39 @@
+
+	
+.wrapper
+	@apply mx-auto
+	.title
+		@apply max-w-[885px] mx-auto
+.card, .active
+	@apply relative w-[20%] h-[563px] overflow-hidden pb-0 flex flex-col justify-end items-center rounded-xl
+	transition: .5s ease
+	>img
+		@apply absolute z-0 object-cover inset-0
+	>h4
+		@apply z-10 relative bottom-[160px] text-white text-3xl leading-[40px] text-left w-[300px]
+		font-family: 'Eudoxus-Bold'
+		transform: rotate(-90deg)
+.slider
+		@apply flex justify-center gap-[30px] mt-[50px] px-20 mx-auto
+.activeContent
+	@apply relative z-20 pb-8 pl-8
+	transition: .5s ease
+	animation: fadeIn .8s ease
+	>p
+		@apply text-base mt-4 mb-6
+	>h4
+		@apply z-10 relative text-white text-3xl leading-[40px] text-left
+		font-family: 'Eudoxus-Bold'
+	.icon
+		@apply w-[60px] h-[60px] rounded-[24px] flex justify-center items-center
+		background: rgba(255, 255, 255, 0.08)
+		backdrop-filter: blur(24px)
+	
+.active
+	@apply w-[70%] items-start
+
+@keyframes fadeIn
+	0%
+		opacity: 0
+	100%
+		opacity: 1

@@ -1,0 +1,21 @@
+.wrapper
+	@apply text-center px-8 relative
+	>h3
+		@apply text-[32px] leading-[180%] px-32
+		color: rgba(255, 255, 255, 70% )
+		margin-top: 8px
+		>span
+			color: rgba(255, 255, 255, 100% )
+			font-family: 'Eudoxus-Bold'
+	.arrow
+		@apply relative top-0 mx-auto hover:cursor-pointer
+		animation: getDown 1s ease infinite
+		
+@keyframes getDown
+	0%
+		top: 24px
+	50%
+		top: 30px
+	100%
+		top: 24px
+		
