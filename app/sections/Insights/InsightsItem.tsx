@@ -5,7 +5,11 @@ import styles from './Insights.module.sass'
 import Image from 'next/image'
 import { fadeIn } from '../../utils/motion'
 
-const InsightsItem: FC<{ item: IInsightsItem }> = ({ item, index }) => {
+interface IItem {
+	index: number
+}
+
+const InsightsItem: FC<{ item: IInsightsItem } & IItem> = ({ item, index }) => {
 	return (
 		<motion.div
 			className={styles.card}

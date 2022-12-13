@@ -15,7 +15,7 @@ const WhatsNew: FC = () => {
 		<section>
 			<motion.div
 				className={styles.wrapper}
-				variants={staggerContainer}
+				variants={staggerContainer('staggerChildren', 'DelayChildren')}
 				initial='hidden'
 				whileInView='show'
 				viewport={{ once: false, amount: 0.25 }}

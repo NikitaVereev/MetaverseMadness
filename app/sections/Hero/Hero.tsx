@@ -14,7 +14,7 @@ const Hero: FC = () => {
 	return (
 		<section className='pt-0 pb-[200px]'>
 			<motion.div
-				variants={staggerContainer}
+				variants={staggerContainer('staggerChildren', 'delayChildren')}
 				initial='hidden'
 				whileInView='show'
 				viewport={{ once: false, amount: 0.25 }}
@@ -31,7 +31,7 @@ const Hero: FC = () => {
 					variants={slideIn('right', 'tween', 0.2, 1)}
 				>
 					<div className={cn(styles.image, 'hero-gradient')}>
-						<img src='/space.png' alt='space' />
+						<Image src='/space.png' alt='space' width={1000} height={100} />
 					</div>
 					<motion.div className={styles.stamp} variants={zoomIn(2, 1)}>
 						<Image src='/stamp.png' alt='stamp' layout='fill' />

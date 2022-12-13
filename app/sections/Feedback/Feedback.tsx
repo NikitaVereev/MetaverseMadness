@@ -8,7 +8,7 @@ const Feedback: FC = () => {
 	return (
 		<section>
 			<motion.div
-				variants={staggerContainer}
+				variants={staggerContainer('staggerChildren', 'DelayChildren')}
 				initial='hidden'
 				whileInView='show'
 				viewport={{ once: false, amount: 0.25 }}

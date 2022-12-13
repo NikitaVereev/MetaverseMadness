@@ -6,7 +6,13 @@ import cn from 'classnames'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../utils/motion'
 
-const ExploreItem: FC<{ item: ISlideItem }> = ({
+interface IItem {
+	active: boolean | string
+	handleClick: any
+	index: number
+}
+
+const ExploreItem: FC<{ item: ISlideItem } & IItem> = ({
 	item,
 	active,
 	handleClick,

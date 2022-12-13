@@ -14,7 +14,10 @@ const World: FC = () => {
 	return (
 		<section>
 			<motion.div
-				variants={staggerContainer}
+				variants={staggerContainer(
+					{ staggerChildren: 0.1 },
+					{ delayChildren: 0.1 }
+				)}
 				initial='hidden'
 				whileInView='show'
 				viewport={{ once: false, amount: 0.25 }}
