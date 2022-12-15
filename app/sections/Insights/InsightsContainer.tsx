@@ -9,7 +9,7 @@ const InsightsContainer: FC<{ menu: IInsights }> = ({ menu: { items } }) => {
 	return (
 		<motion.div
 			className={styles.content}
-			variants={staggerContainer('staggerChildren', 'DelayChildren')}
+			variants={staggerContainer()}
 			initial='hidden'
 			whileInView='show'
 			viewport={{ once: false, amount: 0.25 }}

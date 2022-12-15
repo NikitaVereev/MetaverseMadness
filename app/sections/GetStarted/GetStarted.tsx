@@ -15,7 +15,7 @@ const GetStarted: FC = () => {
 		<section>
 			<motion.div
 				className={styles.wrapper}
-				variants={staggerContainer('staggerChildren', 'DelayChildren')}
+				variants={staggerContainer()}
 				initial='hidden'
 				whileInView='show'
 			>

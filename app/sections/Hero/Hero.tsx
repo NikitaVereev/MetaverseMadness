@@ -14,7 +14,7 @@ const Hero: FC = () => {
 	return (
 		<section className='pt-0 pb-[200px]'>
 			<motion.div
-				variants={staggerContainer('staggerChildren', 'delayChildren')}
+				variants={staggerContainer()}
 				initial='hidden'
 				whileInView='show'
 				viewport={{ once: false, amount: 0.25 }}
