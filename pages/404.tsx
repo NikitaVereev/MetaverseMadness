@@ -1,8 +1,8 @@
 import { NextPage } from 'next'
-import Text from '../app/components/screens/Text'
+import Error from '../app/components/screens/Error.tsx/Error'
 
 const ErrorPage: NextPage = () => {
-	return <Text />
+	return <Error />
 }
 
 export default ErrorPage
