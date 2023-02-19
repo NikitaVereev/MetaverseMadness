@@ -10,6 +10,11 @@ export default function App({ Component, pageProps }: AppProps) {
 				<title>Metaversus</title>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
+				<meta
+					property='og:title'
+					content='Это вообще жесть, как так можно, я сделал этот сайт с помощью jsm, и проверяю seo оптимизацию'
+					key='title'
+				/>
 			</Head>
 			<MainProvider {...pageProps}>
 				<Component {...pageProps} />
