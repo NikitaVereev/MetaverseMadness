@@ -15,7 +15,6 @@ export default function App({ Component, pageProps }: AppProps) {
 					content='Это заголовок данного сайта Metaversus'
 					key='title'
 				/>
-				<body>Verification: b5a9ee4525d63e19</body>
 			</Head>
 			<MainProvider {...pageProps}>
 				<Component {...pageProps} />
