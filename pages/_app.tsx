@@ -12,9 +12,10 @@ export default function App({ Component, pageProps }: AppProps) {
 				<link rel='icon' href='/favicon.ico' />
 				<meta
 					property='og:title'
-					content='Это вообще жесть, как так можно, я сделал этот сайт с помощью jsm, и проверяю seo оптимизацию'
+					content='Это заголовок данного сайта Metaversus'
 					key='title'
 				/>
+				<body>Verification: b5a9ee4525d63e19</body>
 			</Head>
 			<MainProvider {...pageProps}>
 				<Component {...pageProps} />
