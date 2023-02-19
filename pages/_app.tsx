@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					content='Это заголовок данного сайта Metaversus'
 					key='title'
 				/>
+				<meta name='yandex-verification' content='b5a9ee4525d63e19' />
 			</Head>
 			<MainProvider {...pageProps}>
 				<Component {...pageProps} />
